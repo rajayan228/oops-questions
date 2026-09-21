@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class worker
+{
+    int wno;
+    string wname;
+    float hrwrk,wgrate;
+    float totwage;
+    float calcwg(){
+        totwage=hrwrk*wgrate;
+        return totwage;
+    }
+  public:
+    void in_data(){
+        cout<<"enter worker no:";
+        cin>>wno;
+        cout<<"worker name:";
+        cin>>wname;
+        cout<<"enter hours worked:";
+        cin>>hrwrk;
+        cout<<"enter wage rate per hour:";
+        cin>>wgrate;
+
+        calcwg();
+        
+    }
+    void out_data(){
+        cout<<" worker no:"<<wno<<endl;
+        cout<<"worker name:"<<wname<<endl;
+        cout<<"hours worked:"<<hrwrk<<endl;
+        cout<<"wage rate:"<<wgrate<<endl;
+        cout<<"totalwage:"<<totwage<<endl;
+        
+    }
+    
+};
+int main(){
+    worker a;
+    a.in_data();
+    a.out_data();
+}
